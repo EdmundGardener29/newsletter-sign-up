@@ -1,16 +1,25 @@
-const form = document.querySelector("form-control");
+const form = document.getElementById("form");
+const button = document.querySelector(".submit");
 
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
-  checkInput();
-});
 
-function input() {
-  const email = email.value.trim();
 
-  if (email === "") {
-    setErrorFor(email);
+const handleSubmit = () => { 
+  
+
+  const emailInput = document.getElementById("email");
+  const email = emailInput.value.trim();
+
+  if (validateEmail(email)) {
+
+    window.location.href = "success.html";
+
+    return;
   } else {
-    setSuccessFor(email);
+
+    alert("Please enter a valid email address.");
   }
+}
+function validateEmail(email) {
+  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return regex.test(email);
 }

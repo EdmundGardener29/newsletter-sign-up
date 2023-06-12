@@ -37,16 +37,16 @@
     </div>
   </div>
  <div class="email-container">
-<form action="success.html" class="form-control" id="form">
+<form target="_blank" method="post" onsubmit="return handleSubmit()"  class="form-control" id="form">
    <label for="email">Email address</label><br>
      <input type="email" placeholder="email@company.com" id="email" />  
+     <button type="submit" class="submit">Subscribe to monthly newsletter</button>
     </form>
-    <button>Subscribe to monthly newsletter</button>
   </div>
   <div class="container2">
    <img src="./assets/images/Group.png" alt="">
   </div>
   </main>
-  <script src="script.js"></script>
+  <script src="./script.js"></script>
 </body>
 </html>

@@ -89,8 +89,8 @@ h4 {
   top: 600px;
 }
 
-#error-message {
-  visibility: hidden;
+.error-message {
+  /* visibility: hidden; */
   margin-top: -1rem;
   width: 356px;
   height: 18px;
@@ -144,14 +144,11 @@ button:hover {
 }
 
 .success {
-  /* visibility: hidden; */
   box-sizing: border-box;
   width: 504px;
   height: 520px;
-  margin-right: 2rem;
-  justify-content: center;
-  left: 468px;
-  top: 280px;
+  margin-left: 41rem;
+  margin-top: 10rem;
   background: #ffffff;
   box-shadow: 0px 15px 60px rgba(0, 0, 0, 0.25);
   border-radius: 36px;
@@ -206,4 +203,84 @@ button:hover {
   background: linear-gradient(204.47deg, #ff6a3a 0%, #ff527b 100%);
   box-shadow: 0px 16px 32px rgba(255, 97, 85, 0.5);
   color: white;
+}
+
+@media only screen and (max-width: 420px) {
+  main {
+    position: relative;
+    width: 375px;
+    height: 842px;
+    background: #ffffff;
+  }
+
+  .container2 {
+    max-width: 100%;
+    height: auto;
+    left: -19px;
+    top: -2px;
+    margin-top: -51rem;
+    /* background-image: url(./assets/images/Mask\ small.svg); */
+  }
+  .container2 img {
+    width: 50%;
+    height: auto;
+  }
+
+  .container {
+    width: 365px;
+    height: 478px;
+    left: 24px;
+    top: 324px;
+  }
+  .update h1 {
+    margin-left: 1rem;
+    margin-top: -12rem;
+  }
+  .update h4 {
+    margin-left: 1rem;
+    margin-top: -14rem;
+  }
+  .discovery {
+    margin-left: 2rem;
+    margin-top: -5rem;
+  }
+  .messuring {
+    margin-left: 2rem;
+    margin-top: -6rem;
+  }
+  .more {
+    margin-top: 1rem;
+    margin-left: 2rem;
+  }
+
+  .form-control input{
+    width:286px;
+    
+  }
+    button {
+    width: 285px;
+    margin-top: 1rem;
+  }
+
+  .success {
+    position: relative;
+    width: 375px;
+    height: 812px;
+    background: #ffffff;
+    margin-left: 2rem;
+  }
+  .success-text {
+    align-items: center;
+  }
+  .success h2 {
+    margin-left: -1rem;
+  }
+  .success p {
+    width: 301px;
+    margin-left: -1rem;
+  }
+  .success button {
+    width: 215px;
+    margin-top: 5rem;
+  }
 }

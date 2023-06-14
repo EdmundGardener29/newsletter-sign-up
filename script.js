@@ -1,62 +1,34 @@
-const form = document.getElementById("form");
-const button = document.querySelector(".submit");
-const success = document.getElementById("success");
-const dismisbtn = document.getElementById("dismissbtn");
-const errorMessage = document.getElementById("error-message");
+const form = document.querySelector("form");
+form.addEventListener("submit", handleFormSubmit);
 
+function handleFormSubmit(event) {
+  event.preventDefault();
 
-const handleSubmit = () => {
-  
-
-  const emailInput = document.getElementById("email");
-  const email = emailInput.value.trim();
+  const emailInput = document.querySelector("#email");
+  const email = emailInput.value;
 
   if (validateEmail(email)) {
+    const container = document.querySelector(".container");
+    container.style.display = "none";
 
-    window.location.href = "success.html";
+    const successContainer = document.querySelector(".container-2");
+    successContainer.classList.remove("hidden");
 
-    return;
-  } else {
+    const emailParagraph = successContainer.querySelector("p");
+    emailParagraph.innerHTML = `A confirmation email has been sent to ${email}. Please open it and click the button inside to confirm your subscription.`;
 
-     alert("This email is invalid.");
+    const dismissButton = successContainer.querySelector("button");
+    dismissButton.addEventListener("click", handleDismissButtonClick);
   }
-    
-  dismisbtn.addEventListener('click', function () {
-    success.remove();
-  })
-  console.log(success);
 }
-
 
 function validateEmail(email) {
-  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return regex.test(email);
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
 }
 
-
-// function handleSubmit(event) {
-
-//   const emailInput = document.getElementById("email");
-//   const email = emailInput.value;
-
-//   if (validateEmail(email)) {
-//     // Clear any existing error message
-//     document.getElementById("error-message").textContent = "";
-
-//     // Form submission logic here
-//     window.location.href = "success.html";
-//   } else {
-//     // Display the error message in the form space
-//     document.getElementById("error-message").textContent =
-//       "Invalid email format.";
-//   }
-// }
-
-
-
-// function validateEmail(email) {
-//   // Regular expression pattern to validate email format
-//   var pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-//   return pattern.test(email);
-// }
+function handleDismissButtonClick() {
+  // Hide the success message
+  const successContainer = document.querySelector(".container-2");
+  successContainer.style.display = "none";
+}

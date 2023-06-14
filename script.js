@@ -1,5 +1,17 @@
 const form = document.querySelector("form");
+const email = document.getElementById("email");
+const error = document.getElementById("error");
 form.addEventListener("submit", handleFormSubmit);
+
+email.addEventListener("invalid", (e) => {
+  e.preventDefault();
+
+  error.textContent = "Invalid Email";
+  error.style.display = "block";
+});
+
+
+
 
 function handleFormSubmit(event) {
   event.preventDefault();

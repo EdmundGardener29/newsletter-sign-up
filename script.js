@@ -6,12 +6,10 @@ form.addEventListener("submit", handleFormSubmit);
 email.addEventListener("invalid", (e) => {
   e.preventDefault();
 
-  error.textContent = "Invalid Email";
+  error.textContent = "Valid email required";
   error.style.display = "block";
+
 });
-
-
-
 
 function handleFormSubmit(event) {
   event.preventDefault();
@@ -26,8 +24,8 @@ function handleFormSubmit(event) {
     const successContainer = document.querySelector(".container-2");
     successContainer.classList.remove("hidden");
 
-    const emailParagraph = successContainer.querySelector("p");
-    emailParagraph.innerHTML = `A confirmation email has been sent to ${email}. Please open it and click the button inside to confirm your subscription.`;
+     const emailParagraph = successContainer.querySelector("p");
+     emailParagraph.innerHTML = `A confirmation email has been sent to ${email}. Please open it and click the button inside to confirm your subscription.`;
 
     const dismissButton = successContainer.querySelector("button");
     dismissButton.addEventListener("click", handleDismissButtonClick);

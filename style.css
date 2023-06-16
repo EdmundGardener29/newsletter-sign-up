@@ -10,6 +10,7 @@ body {
   align-items: center;
   min-height: 100vh;
   border-radius: 20px;
+  overflow: hidden;
   background-color: #242742;
 }
 .container {
@@ -17,6 +18,7 @@ body {
   width: 800px;
   background-color: white;
   padding: 30px;
+  box-sizing: border-box;
   border-radius: 20px;
 }
 .right {
@@ -27,7 +29,7 @@ body {
 }
 .left img {
   width: 100%;
-  margin-left: 2rem;
+  margin-left: 1rem;
 }
 ul {
   list-style-image: url(./assets/images/icon-success.svg);
@@ -40,7 +42,6 @@ form {
   display: flex;
   flex-direction: column;
   width: 300px;
-  /* background: aquamarine; */
 }
 label {
   margin-bottom: 10px;
@@ -57,7 +58,7 @@ input {
   outline: none;
   background: rgba(255, 97, 85, 0.15);
   opacity: 0.9s;
-  border: 1px solid #ff6a3a;
+  border: 0.1px solid;
 }
 #error {
   color: #ff527b;
@@ -75,7 +76,8 @@ button {
 }
 button:hover {
   background: linear-gradient(204.47deg, #ff6a3a 0%, #ff527b 100%);
-  transition: all 1s;
+  box-shadow: 0px 16px 32px rgba(255, 97, 85, 0.5);
+  /* transition: all 1s; */
 }
 h1 {
   font-size: 50px;
@@ -86,28 +88,44 @@ h1 {
 }
 .container-2 {
   background-color: white;
-  width: 510px;
+  width: 504px;
   padding: 40px;
+  height: 520px;
+  top: 280px;
+  left: 468px;
+  box-sizing: border-box;
   border-radius: 35px;
 }
 .container-2 h1 {
   font-size: 40px;
 }
-.container-2 span {
-  font-weight: bolder;
+.success {
+  font-weight: bold;
 }
 .icon {
   width: 50px;
 }
 .container-2 button {
- width: 294px;
- margin-left: 2rem;
+  width: 294px;
+  margin-left: 2rem;
+  bottom: 31.85px;
 }
+
+.confirm-msg {
+  text-align: left;
+}
+.user-email {
+  font-weight: bold;
+  font-size: 20px;
+}
+
 @media (max-width: 768px) {
   .container {
     flex-direction: column-reverse;
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
     padding: 0;
+    border-radius: 0;
   }
   body {
     padding: 0;
@@ -132,10 +150,14 @@ h1 {
   }
   .container-2 {
     min-height: 100vh;
+    width: 100vw;
+    border-radius: 0;
   }
+ 
+
   .container-2 button {
- width: 294px;
- margin-left: 0rem;
- margin-top: 20rem;
-}
+    width: 294px;
+    margin-left: 0rem;
+    margin-top: 12rem;
+  }
 }

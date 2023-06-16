@@ -24,11 +24,13 @@ function handleFormSubmit(event) {
     const successContainer = document.querySelector(".container-2");
     successContainer.classList.remove("hidden");
 
-     const emailParagraph = successContainer.querySelector("p");
-     emailParagraph.innerHTML = `A confirmation email has been sent to ${email}. Please open it and click the button inside to confirm your subscription.`;
+     const emailParagraph = successContainer.querySelector(".confirm-msg");
+     emailParagraph.innerHTML = `A confirmation email has been sent to <span class='user-email'>${email}</span>. Please open it and click the button inside to confirm your subscription.`;
 
     const dismissButton = successContainer.querySelector("button");
-    dismissButton.addEventListener("click", handleDismissButtonClick);
+    dismissButton.addEventListener("click", function () {
+      window.location.reload();
+    });
   }
 }
 

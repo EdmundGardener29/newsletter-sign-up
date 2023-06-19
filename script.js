@@ -40,7 +40,6 @@ function validateEmail(email) {
 }
 
 function handleDismissButtonClick() {
-  // Hide the success message
   const successContainer = document.querySelector(".container-2");
   successContainer.style.display = "none";
 }

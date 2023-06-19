@@ -27,9 +27,9 @@ body {
 .left {
   width: 40%;
 }
-.left img {
+.container-left img {
   width: 100%;
-  margin-left: 1rem;
+  margin-left: 0rem;
 }
 ul {
   list-style-image: url(./assets/images/icon-success.svg);
@@ -37,11 +37,13 @@ ul {
 li {
   margin-bottom: 22px;
   margin-left: -22px;
+  font-size: 16px;
 }
 form {
   display: flex;
   flex-direction: column;
   width: 300px;
+  margin-top: 4rem;
 }
 label {
   margin-bottom: 10px;
@@ -83,6 +85,10 @@ h1 {
   font-size: 50px;
   color: #242742;
 }
+p {
+  font-size: 16px;
+  width: 376px;
+}
 .hidden {
   display: none;
 }
@@ -106,9 +112,10 @@ h1 {
   width: 50px;
 }
 .container-2 button {
-  width: 294px;
+  width: 319px;
   margin-left: 2rem;
   bottom: 31.85px;
+  margin-top: 73px;
 }
 
 .confirm-msg {
@@ -122,8 +129,8 @@ h1 {
 @media (max-width: 768px) {
   .container {
     flex-direction: column-reverse;
-    width: 100vw;
-    height: 100vh;
+    width: 105vw;
+    height: 104vh;
     padding: 0;
     border-radius: 0;
   }
@@ -144,20 +151,41 @@ h1 {
   .container-left img {
     content: url("./assets/images/illustration-sign-up-mobile.svg");
     margin-left: 0rem;
+    margin-bottom: 2rem;
   }
   form {
     width: 90%;
+  }
+  input {
+    margin-left: 11px;
+  }
+  button {
+    width: 90;
+    margin-left: 11px;
+    align-items: center;
+    /* margin-top: 14rem; */
   }
   .container-2 {
     min-height: 100vh;
     width: 100vw;
     border-radius: 0;
   }
- 
+  .message {
+    margin-top: 96px;
+  }
+  .confirm-msg {
+    width: 327px;
+    height: 96px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+  }
 
   .container-2 button {
     width: 294px;
     margin-left: 0rem;
-    margin-top: 12rem;
+    margin-top: 14rem;
   }
 }

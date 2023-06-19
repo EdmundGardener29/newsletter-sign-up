@@ -21,6 +21,20 @@ function handleFormSubmit(event) {
     const container = document.querySelector(".container");
     container.style.display = "none";
 
+// document.getElementById("form").addEventListener("submit", (e) => {
+//   for (var i = 0; i < document.querySelectorAll("#form input").length; i++) {
+//     if (document.querySelectorAll("form input")[i].value === "") {
+//       e.preventDefault();
+
+//       document.querySelectorAll("form input")[i].style.backgroundColor = "pink";
+//       document.querySelectorAll("form input")[i].placeholder = "Required";
+//     } else {
+//       document.querySelectorAll("form input")[i].style.backgroundColor =
+//         "#fff";
+//     }
+//   }
+// });
+
     const successContainer = document.querySelector(".container-2");
     successContainer.classList.remove("hidden");
 
@@ -43,3 +57,4 @@ function handleDismissButtonClick() {
   const successContainer = document.querySelector(".container-2");
   successContainer.style.display = "none";
 }
+

@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+      integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e"
+      crossorigin="anonymous"/>
     <link
       rel="icon"
       type="image/png"
@@ -17,35 +21,43 @@
     </title>
   </head>
   <body>
-    <div class="container">
-      <div class="container-right">
-        <h1>Stay updated!</h1>
-        <p>Join 60,000+ product managers receiving monthly updates on:</p>
-        <ul>
+    <div id="container" class="container">
+      <div id="left" class="left">
+        <div class="left-info">
+          <h1>Stay updated!</h1>
+          <p>Join 60,000+ product managers receiving monthly updates on:</p>
+          <ul>
           <li>Product discovery and building what matters</li>
           <li>Measuring to ensure updates are a success</li>
           <li>And much more!</li>
         </ul>
-        <form target="_blank" method="post" onsubmit="return" id="form" >
-          <label for="email"> Email address <span id="error">Invalid Email</span></label>
-          <input type="email" id="email" placeholder=" email@company.com" required />
-          <button type="submit">Subscribe to Monthly Newsletter</button>
+        </div>
+        <form id="form">
+          <div class="form-item">
+            <label for="email">
+              <p>Email address</p>
+              <p id="invalid-email" class="invalid-email">Valid email required</p>
+            </label>
+            <input type="email" name="email" id="email" placeholder="email@company.com">
+          </div>
+          <div class="form-item">
+            <button id="submit-btn" type="submit">Subscribe to Monthly Newsletter</button>
+          </div>
         </form>
       </div>
-      <div class="container-left">
+      <div id="right" class="right">
         <img src="./assets/images/illustration-sign-up-desktop.svg" alt="" />
       </div>
+
     </div>
-    <div class="container-2 hidden">
-      <div class="message">
-        <img src="./assets/images/icon-success.svg" class="icon" />
-        <h1>Thanks for subscribing!</h1>
-        <p class="confirm-msg">
-          <!-- A confirmation email has been sent to <span id="userEmail">@loremcompany.com.</span><br> Please open
-          it and click the button inside to confirm your subscription. -->
-        </p>
-        <button>Dismiss message</button>
-      </div>
+    <div id="confirmed-message" class="confirmed-message hide" >
+      <img src="assets/images/icon-success.svg" alt="">
+      <h2>Thanks for subscribing!</h2>
+      <p>
+    A confirmation email has been sent to  <span id="user-email"> ash@loremcompany.com.</span> Please open
+    it and click the button inside to confirm your subscription.
+  </p>
+  <button id="dismiss-btn">Dismiss message</button>
     </div>
     <script src="./script.js"></script>
   </body>

@@ -83,6 +83,7 @@ body {
   background: hsl(234, 29%, 20%);
   color: #fff;
   font-weight: 700;
+  border-radius: 8px;
   outline: none;
   border: none;
 }
@@ -124,6 +125,7 @@ body {
   width: 100%;
   padding: 1rem;
   border: 8px;
+  border-radius: 8px;
   outline: none;
   border: none;
 }
@@ -161,6 +163,7 @@ body {
   }
   .left-info ul li {
     margin-bottom: 1rem;
+    width: 290px;
   }
   .right img {
     width: 100%;
